@@ -27,11 +27,12 @@ langs_diff = {
     "Git": 2,
 }
 
-
 def my_langs():
+    result = ""
     for key, value in langs_diff.items():
-        print(f"{key} : {get_difficulties (key)}\n")
-def get_difficulties (lang_name) :
+        result += f"{key} : {get_difficulties (key)}, "
+    return result
+def get_difficulties(lang_name) :
     return langs_diff.get(lang_name)
 
 print(my_langs())
