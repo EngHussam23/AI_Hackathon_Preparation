@@ -1,7 +1,10 @@
 # Practice file operations and error handling
 def read_config_file(filename):
     try:
-        # Your code here: open and read a file
+        # open a file
+        open(filename, '+')
+        # read a file
+        
         pass
     except FileNotFoundError:
         # Your code here: handle missing file
