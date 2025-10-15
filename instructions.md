@@ -1,16 +1,82 @@
-# AI Hackathon Preparation - 7-Day Learning Roadmap
+# 🚀 AI Document Management Hackathon - Preparation Guide
 
-Welcome to your intensive AI Hackathon preparation journey! This 7-day roadmap will take you from Python basics to deploying AI-powered applications. Each day includes 3 learning goals and 1 hands-on project.
+**Challenge Focus:** AI-Powered Document Management for Smart Governance  
+**Timeline:** 48-Hour Hackathon | **Team Size:** Up to 5 members
+
+Welcome to your specialized preparation journey for the Document Management AI Hackathon! This guide will take you from Python fundamentals to building production-ready OCR and document classification systems.
+
+## 🎯 **Hackathon Challenge Overview**
+
+### **Problem Statement:**
+
+Transform legacy paper-based government systems into intelligent digital solutions that reduce processing time by 30-40% and improve accuracy by 10-15%.
+
+### **Core Requirements:**
+
+- **Document Classification:** 5 types (invoice, receipt, resume, report, contract)
+- **OCR Processing:** English text extraction including handwriting
+- **Structured Data Extraction:** JSON format for invoices/receipts
+- **Container Deployment:** Docker/Kubernetes ready
+
+### **Technical Stack:**
+
+- **AI/ML:** Open-source models only (Tesseract, scikit-learn, Transformers)
+- **Computer Vision:** OpenCV, PIL/Pillow for preprocessing
+- **Deployment:** Docker containers, FastAPI/Flask
+- **Performance:** Optimize for speed and resource efficiency
 
 ## Prerequisites
 
-- Basic programming knowledge
-- Computer with internet access
-- Text editor or IDE (VS Code recommended)
+- Python 3.8+ programming knowledge
+- Computer with internet access and Docker capability
+- IDE (VS Code recommended) with Python extensions
+- Basic understanding of machine learning concepts
 
 ---
 
-## Day 1: Python Fundamentals & Setup
+## 🛠️ **Essential Setup Guide**
+
+### **Environment Setup:**
+
+```bash
+# 1. Python Environment
+python3 -m venv hackathon_env
+source hackathon_env/bin/activate  # Linux/Mac
+# hackathon_env\Scripts\activate  # Windows
+
+# 2. Core Dependencies
+pip install opencv-python pillow pytesseract easyocr
+pip install scikit-learn pandas numpy matplotlib
+pip install fastapi uvicorn docker
+
+# 3. OCR Engine Setup
+# Ubuntu/Debian:
+sudo apt-get install tesseract-ocr tesseract-ocr-eng
+
+# MacOS:
+brew install tesseract
+
+# Windows: Download from GitHub releases
+```
+
+### **Docker Setup:**
+
+```bash
+# Install Docker (platform-specific)
+# Verify installation
+docker --version
+docker run hello-world
+```
+
+### **Development Tools:**
+
+- **VS Code Extensions:** Python, Docker, Remote-Containers
+- **Testing Tools:** Postman for API testing
+- **Version Control:** Git configuration
+
+---
+
+## 📚 **Phase 1: Python Fundamentals & File Operations** ✅ COMPLETED
 
 **Focus**: Building a solid Python foundation
 
