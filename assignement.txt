@@ -1,0 +1,16 @@
+For this assignment, each group must choose one open-source project in any language desired, use this link it may help
+https://dev.to/surajondev/20-trending-and-popular-java-open-source-project-2igi
+You could use Eclipse, Netbeans or any other friendly IDE.
+Import your three Java source Code separately.
+Run the chosen Static Analyzer (SpotBugs, SonarQub, Dependency Finder etc) to find
+some of existing Bugs
+6. List the main categories of the finding Bugs.
+7. If your project does not have bugs, choose another project.
+8. Explain the bug in context of the surrounding code. You might copy the relevant code and
+annotate it in your submission.
+9. If you were the testing manager, which of these bugs would you fix? Which of these bugs
+would you ignore?
+10. If you were to perform a manual code review, would you have found these bugs?
+11. Include screenshots, steps for downloading and running the tools, code, etc. Make your
+report appealing and easy to read.
+12. Submission Deadline Nov.14th 2025@13:00 (PDF only)
