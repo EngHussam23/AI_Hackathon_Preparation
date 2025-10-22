@@ -17,14 +17,25 @@ def load_image(image_path):
     """
     try:
         with Image.open(image_path) as img:
+            # confirm image opening
             print("Image opened!")
+            # print some image details
             print(f"Image size: {img.size}")
             print(f"Image format: {img.format}")
             print(f"Image mode: {img.mode}")
-            print(f"Text extracted: {pytesseract.image_to_string(img)}")
-            name, ext = os.path.splitext(img)
-            rotated_img = img.rotate(45)
-            rotated_img.save(f"{name}.{ext}")
+            print(f"Text extracted:\n{pytesseract.image_to_string(img)}")
+            # get the path of the image and save is in name & ext
+            name, ext = os.path.splitext(image_path)
+            print(f"Path: {name}{ext}\n")
+            # rotate the image and save it
+            rotated_img = img.rotate(45, expand=True)
+            rotated_img.save(f"new_{name}{ext}")
+            # resize the image and save it
+            resized_img = img.resize((400, 400))
+            resized_img.save(f"edited_images/new_resized_{name}{ext}")
+            print(f"New image size: {resized_img.size}")
+            # confirm the image editing
+            print(f"{name} is edited successfully! 🎉")
     except FileNotFoundError:
         print("Image not found", file=sys.stderr)
     except PIL.UnidentifiedImageError:
