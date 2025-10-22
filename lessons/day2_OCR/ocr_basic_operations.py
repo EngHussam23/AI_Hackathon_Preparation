@@ -29,7 +29,7 @@ def load_image(image_path):
             print(f"Path: {name}{ext}\n")
             # rotate the image and save it
             rotated_img = img.rotate(45, expand=True)
-            rotated_img.save(f"new_{name}{ext}")
+            rotated_img.save(f"edited_images/new_{name}{ext}")
             # resize the image and save it
             resized_img = img.resize((400, 400))
             resized_img.save(f"edited_images/new_resized_{name}{ext}")
