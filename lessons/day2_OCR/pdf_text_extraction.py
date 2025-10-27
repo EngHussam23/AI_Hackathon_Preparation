@@ -28,3 +28,5 @@ def adjust_brightness(image, factor):
     Adjusting the brightness for the passed image to greyscale
     """
     return ImageEnhance.Brightness(image).enhance(factor)
+
+def exctract
