@@ -132,36 +132,142 @@ AI_Hackathon_Preparation/
   - Resource management with context managers
   - Comprehensive testing with edge cases
 
-## 🛠 **Technologies Used**
+## 🛠 **Technologies & Tech Stack**
 
-### **Core Python:**
+### **Python Core & Libraries:**
 
+- **Python 3.8+** - Core programming language
 - **File I/O:** `open()`, context managers
 - **Error Handling:** try/except/finally blocks
 - **Data Structures:** Lists, dictionaries, iteration
 - **Documentation:** Docstrings, comments
 - **System Integration:** `sys` module for error streams
 
+### **OCR & Document Processing:**
+
+- **Tesseract OCR** - Open-source OCR engine (system dependency)
+- **pytesseract** - Python wrapper for Tesseract
+- **Pillow (PIL)** - Image processing and manipulation
+- **PyPDF2** - PDF text extraction and manipulation
+- **pdf2image** - Convert PDF pages to images (requires Poppler)
+- **OpenCV (cv2)** - Advanced image preprocessing (upcoming)
+- **EasyOCR** - Neural network-based OCR (upcoming)
+
+### **Code Quality & Security:**
+
+- **Pylint** - Python code linter for code quality and standards
+- **Bandit** - Security vulnerability scanner for Python
+- **Black** - Automatic code formatter
+- **flake8** - Style guide enforcement (optional)
+
+### **Frontend (Next.js Integration):**
+
+- **Node.js 18+ LTS** - JavaScript runtime
+- **Next.js** - React framework for production-ready web apps
+- **React** - UI component library
+- **TypeScript** - Type-safe JavaScript (recommended)
+- **Tailwind CSS** - Utility-first CSS framework (optional)
+
+### **API & Backend:**
+
+- **FastAPI / Flask** - Python REST API frameworks (upcoming)
+- **Pydantic** - Data validation (for FastAPI)
+- **uvicorn** - ASGI server (for FastAPI)
+
+### **Deployment & DevOps:**
+
+- **Docker** - Containerization platform
+- **Kubernetes** - Container orchestration (bonus)
+- **Docker Compose** - Multi-container Docker applications
+
+### **System Dependencies (Windows):**
+
+- **Poppler** - PDF rendering library (required by pdf2image)
+- **Tesseract OCR** - OCR engine executable
+
 ### **Development Tools:**
 
-- **Code Formatting:** Black formatter
-- **Version Control:** Git
-- **IDE:** VS Code with Python extensions
-- **Testing:** Manual testing with various input types
+- **Git** - Version control
+- **VS Code** - IDE with Python and JavaScript extensions
+- **PowerShell / Bash** - Terminal and scripting
+- **Virtual Environment (venv)** - Python environment isolation
 
 ## 🚀 **Getting Started**
 
 ### Prerequisites
 
-```bash
-# Verify Python installation
-python3 --version
+#### **1. Python Environment Setup**
 
-# Verify pip
-pip3 --version
+```powershell
+# Verify Python installation (3.8+ required)
+python --version
 
-# Install code formatter (optional)
-pip3 install black
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment (PowerShell)
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+.\.venv\Scripts\Activate.ps1
+
+# Upgrade pip
+python -m pip install --upgrade pip
+```
+
+#### **2. Install Python Dependencies**
+
+```powershell
+# Core OCR and PDF processing libraries
+pip install PyPDF2 pdf2image Pillow pytesseract
+
+# Code quality and security tools
+pip install pylint bandit black
+
+# Optional: Install all from requirements.txt (if available)
+pip install -r requirements.txt
+```
+
+#### **3. Install System Dependencies (Windows)**
+
+**Option A: Using Chocolatey (Recommended)**
+
+```powershell
+# Install Chocolatey package manager first (if not installed)
+# Visit: https://chocolatey.org/install
+
+# Install Tesseract OCR
+choco install tesseract -y
+
+# Install Poppler (required for pdf2image)
+choco install poppler -y
+
+# Verify installations
+tesseract --version
+pdfinfo -v
+```
+
+**Option B: Manual Installation**
+
+- **Tesseract OCR:** Download from [UB Mannheim builds](https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
+- **Poppler:** Download from [Poppler for Windows](https://blog.alivate.com.au/poppler-windows/) and add `bin` folder to PATH
+
+#### **4. Next.js Setup (Frontend Development)**
+
+```powershell
+# Verify Node.js installation (18+ LTS recommended)
+node --version
+npm --version
+
+# Create Next.js app in frontend directory
+npx create-next-app@latest frontend
+
+# Or with TypeScript (recommended)
+npx create-next-app@latest frontend --typescript
+
+# Navigate to frontend directory
+cd frontend
+
+# Start development server
+npm run dev
 ```
 
 ### Running the Examples
@@ -171,14 +277,39 @@ pip3 install black
 git clone https://github.com/EngHussam23/AI_Hackathon_Preparation.git
 cd AI_Hackathon_Preparation
 
+# Activate virtual environment
+.\.venv\Scripts\Activate.ps1
+
 # Run Day 1 examples
-cd day1_python_basics
+cd lessons\day1_python_basics
 
 # Test data structures
-python3 data_structures_practice.py
+python data_structures_practice.py
 
 # Test file operations (includes error testing)
-python3 file_operations.py
+python file_operations.py
+
+# Run Day 2 OCR examples
+cd ..\day2_OCR
+
+# Test basic OCR operations
+python ocr_basic_operations.py
+
+# Test PDF text extraction
+python pdf_text_extraction.py
+```
+
+### Code Quality Checks
+
+```powershell
+# Run Pylint on a specific file
+pylint lessons\day2_OCR\pdf_text_extraction.py
+
+# Run Bandit security scan on entire project
+bandit -r lessons\
+
+# Format code with Black
+black lessons\
 ```
 
 ## 📊 **Progress Tracking**
