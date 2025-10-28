@@ -40,10 +40,6 @@ def enhance_quality(image_path):
             print(f"Original text extracted:\n{pytesseract.image_to_string(img)}")
             file_name = os.path.basename(image_path)
             name, ext = os.path.splitext(file_name)
-            # # resize
-            # resized_image = img.resize((600, 200))
-            # resized_image.save(f"edited_images/resized_{name}{ext}")
-            # Brightness
             print("Adjusting image brightness...")
             brightened_image = adjust_brightness(img, 1.25)
             brightened_image.save(f"edited_images/brightened_{name}{ext}")
