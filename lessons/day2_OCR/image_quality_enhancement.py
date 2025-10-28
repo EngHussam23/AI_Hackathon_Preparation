@@ -40,12 +40,12 @@ def enhance_quality(image_path):
             print(f"Original text extracted:\n{pytesseract.image_to_string(img)}")
             file_name = os.path.basename(image_path)
             name, ext = os.path.splitext(file_name)
-            # resize
-            resized_image = img.resize((600, 200))
-            resized_image.save(f"edited_images/resized_{name}{ext}")
+            # # resize
+            # resized_image = img.resize((600, 200))
+            # resized_image.save(f"edited_images/resized_{name}{ext}")
             # Brightness
             print("Adjusting image brightness...")
-            brightened_image = adjust_brightness(resized_image, 1.25)
+            brightened_image = adjust_brightness(img, 1.25)
             brightened_image.save(f"edited_images/brightened_{name}{ext}")
             print(f"Text extracted:\n{pytesseract.image_to_string(brightened_image)}")
             # Contrast
@@ -69,4 +69,4 @@ def enhance_quality(image_path):
     except Exception as e:
         print(f"## Unexpected OCR error: {e}", file=sys.stderr)
 
-enhance_quality("assets/image_2.png")
+enhance_quality("assets/image_1.jpeg")
