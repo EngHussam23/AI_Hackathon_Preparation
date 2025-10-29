@@ -62,44 +62,15 @@ venv.bak/
 *.sublime-project
 *.sublime-workspace
 
-# Next.js / Node.js
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-frontend/build/
-frontend/dist/
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-frontend/.vercel
-frontend/.turbo
-frontend/next-env.d.ts
-
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-.pnpm-store/
-
 # Testing
-.nyc_output/
 coverage/
+.coverage
+htmlcov/
 *.lcov
 
 # Logs
 logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.npm/
-.eslintcache
-.node_repl_history
 
 # Environment variables
 .env
@@ -121,10 +92,11 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 
-# OCR Assets (if you want to ignore large files)
-# Uncomment if needed:
+# OCR Assets - Large test files
+# Uncomment if you have large PDFs or images in these directories:
 # lessons/day2_OCR/assets/*.pdf
-# lessons/day2_OCR/edited_images/
+# lessons/day2_OCR/edited_images/*.png
+# lessons/day2_OCR/edited_images/*.jpg
 
 # Temporary files
 *.tmp

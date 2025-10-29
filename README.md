@@ -2,26 +2,10 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 ![AI](https://img.shields.io/badge/AI-OCR%20%7C%20Classification-orange.svg)
-![Docker](https://img.shields.io/badge/Container-Docker%20%7C%20Kubernetes-blue.svg)
 ![Progress](https://img.shields.io/badge/Progress-Phase%202%20Complete-green.svg)
-![Frontend](https://img.shields.io/badge/Next-Frontend%20Development-blue.svg)
 ![Hackathon](https://img.shields.io/badge/Hackathon-48%20Hours-red.svg)
 
-**Specialized preparation for AI-Powered Document Management hackathon focusing on Smart Governance solutions.**
-
-## 👤 **My Role in the Hackathon**
-
-**Primary Responsibilities:**
-
-- 🎨 **Frontend Development** - Document upload UI and results display
-- 🎤 **Presentation** - Demo and technical explanation
-
-**Skills Leveraged:**
-
-- ✅ Backend OCR understanding (for integration and presentation)
-- ✅ Full-stack perspective (Python + Frontend)
-
----
+**Python practice and preparation for AI-Powered Document Management hackathon focusing on Smart Governance solutions.**
 
 ## 🎯 **Hackathon Challenge: AI Document Management for Smart Governance**
 
@@ -61,8 +45,6 @@
 ### ✅ **Phase 2: Computer Vision & OCR** (COMPLETED)
 
 - **Status:** ✅ **COMPLETED** - October 16-28, 2025
-  - ✅ Learning Goal 1: OCR Foundation (COMPLETED)
-  - ✅ Learning Goal 2: Image Processing & PDF Handling (COMPLETED)
 - **Objective:** Master OCR technologies for document text extraction
 - **Key Technologies:**
   - **Tesseract OCR:** Open-source OCR engine ✅ Mastered
@@ -70,31 +52,10 @@
   - **PyPDF2 & pdf2image:** PDF processing ✅ Mastered
   - **Image Enhancement:** Brightness, contrast, grayscale ✅ Implemented
 - **Major Achievement:** Hybrid PDF extraction strategy (text layer + OCR per page)
+- **Timeline:** October 16-28, 2025
 
-### 🚀 **Phase 2.5: Frontend Development** (CURRENT - Priority 1)
+### 🔜 **Phase 3: Document Classification** (NEXT)
 
-- **Status:** 🚀 **STARTING NOW** - My Primary Responsibility
-- **Objective:** Build user interface for document management system
-- **Key Technologies:**
-  - **React/Next.js:** Modern frontend framework
-  - **Tailwind CSS / Material-UI:** UI styling and components
-  - **Axios:** API integration
-  - **File Upload:** Drag-and-drop interface
-- **Timeline:** Current focus until hackathon
-
-### 🎤 **Phase 2.6: Presentation Preparation** (PARALLEL)
-
-- **Status:** 🎯 **PARALLEL PRIORITY** - My Secondary Responsibility
-- **Objective:** Create compelling hackathon demo and presentation
-- **Deliverables:**
-  - Slide deck with system architecture
-  - Live demo script
-  - Q&A preparation
-  - Business impact presentation
-
-### � **Phase 3: Document Classification** (Optional - Team Dependent)
-
-- **Status:** ⏳ **PENDING** - May be handled by teammates
 - **Objective:** AI-powered document type identification
 - **Key Technologies:**
   - **scikit-learn:** Traditional ML classification
@@ -265,32 +226,8 @@ AI_Hackathon_Preparation/
 - **Pylint** - Python code linter for code quality and standards
 - **Bandit** - Security vulnerability scanner for Python
 - **Black** - Automatic code formatter
-- **flake8** - Style guide enforcement (optional)
 
-### **Frontend (Next.js/React Integration):**
-
-- **Node.js 18+ LTS** - JavaScript runtime
-- **Next.js** - React framework for production-ready web apps
-- **React** - UI component library
-- **TypeScript** - Type-safe JavaScript (recommended)
-- **Tailwind CSS** - Utility-first CSS framework
-- **Material-UI / shadcn/ui** - Component libraries
-- **Axios** - HTTP client for API calls
-- **react-dropzone** - File upload with drag-and-drop
-
-### **API & Backend:**
-
-- **FastAPI / Flask** - Python REST API frameworks (upcoming)
-- **Pydantic** - Data validation (for FastAPI)
-- **uvicorn** - ASGI server (for FastAPI)
-
-### **Deployment & DevOps:**
-
-- **Docker** - Containerization platform
-- **Kubernetes** - Container orchestration (bonus)
-- **Docker Compose** - Multi-container Docker applications
-
-### **System Dependencies (Windows):**
+### **System Dependencies:**
 
 - **Poppler** - PDF rendering library (required by pdf2image)
 - **Tesseract OCR** - OCR engine executable
@@ -298,8 +235,8 @@ AI_Hackathon_Preparation/
 ### **Development Tools:**
 
 - **Git** - Version control
-- **VS Code** - IDE with Python and JavaScript extensions
-- **PowerShell / Bash** - Terminal and scripting
+- **VS Code** - IDE with Python extensions
+- **PowerShell / WSL** - Terminal and scripting
 - **Virtual Environment (venv)** - Python environment isolation
 
 ## 🚀 **Getting Started**
@@ -360,26 +297,6 @@ pdfinfo -v
 - **Tesseract OCR:** Download from [UB Mannheim builds](https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
 - **Poppler:** Download from [Poppler for Windows](https://blog.alivate.com.au/poppler-windows/) and add `bin` folder to PATH
 
-#### **4. Next.js Setup (Frontend Development)**
-
-```powershell
-# Verify Node.js installation (18+ LTS recommended)
-node --version
-npm --version
-
-# Create Next.js app in frontend directory
-npx create-next-app@latest frontend
-
-# Or with TypeScript (recommended)
-npx create-next-app@latest frontend --typescript
-
-# Navigate to frontend directory
-cd frontend
-
-# Start development server
-npm run dev
-```
-
 ### Running the Examples
 
 ```bash
@@ -392,7 +309,7 @@ cd AI_Hackathon_Preparation
 # source .venv/bin/activate    # Linux/Mac
 
 # Run Phase 1 examples
-cd day1_python_basics
+cd lessons\day1_python_basics
 
 # Test data structures
 python data_structures_practice.py
@@ -401,9 +318,9 @@ python data_structures_practice.py
 python file_operations.py
 
 # Run Phase 2 OCR examples
-cd ../lessons/day2
+cd ..\day2_OCR
 
-# Test image operations
+# Test OCR operations
 python ocr_basic_operations.py
 
 # Test format comparison
@@ -411,9 +328,6 @@ python img_formats_comparison.py
 
 # Test image enhancement
 python image_quality_enhancement.py
-
-# Run Phase 2 PDF processing
-cd ../day2_OCR
 
 # Test hybrid PDF extraction
 python pdf_text_extraction.py
@@ -436,10 +350,8 @@ black lessons\
 
 - **Phase 1:** ✅ **100% Complete** - Python fundamentals mastered
 - **Phase 2:** ✅ **100% Complete** - OCR & Image Processing mastered
-- **Phase 2.5:** 🚀 **Starting** - Frontend Development (Current Priority)
-- **Phase 2.6:** 🎯 **Parallel** - Presentation Preparation
 - **Overall Progress:** 29% (2/7 phases complete)
-- **Next Milestone:** Frontend MVP with upload interface
+- **Next Milestone:** Document Classification
 
 ### **Skills Matrix:**
 
@@ -452,10 +364,8 @@ black lessons\
 | Code Documentation      | ⭐⭐⭐⭐⭐ | Mastered |
 | OCR & Image Processing  | ⭐⭐⭐⭐⭐ | Mastered |
 | PDF Processing          | ⭐⭐⭐⭐⭐ | Mastered |
-| Frontend Development    | 🔄         | Learning |
-| API Integration         | 🔄         | Learning |
-| Presentation Skills     | 🔄         | Learning |
 | Document Classification | ⏳         | Pending  |
+| API Development         | ⏳         | Pending  |
 | Deployment              | ⏳         | Pending  |
 
 ## 🎓 **Learning Outcomes**
@@ -527,7 +437,6 @@ This is a personal learning repository, but suggestions and improvements are wel
 
 ---
 
-**Last Updated:** October 28, 2025  
-**Current Focus:** Frontend Development (React/Next.js) - Document Upload Interface  
-**Next Milestone:** Working document management UI with API integration  
-**Hackathon Role:** Frontend Development + Presentation
+**Last Updated:** October 29, 2025  
+**Current Focus:** Python OCR Practice for AI Hackathon  
+**Next Milestone:** Document Classification
